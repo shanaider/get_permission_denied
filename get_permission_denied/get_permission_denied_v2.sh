@@ -13,8 +13,6 @@ for namespace_name in $(kubectl get namespaces -o jsonpath='{.items[*].metadata.
     logs=$(kubectl logs --tail=10 $pod -n $namespace_name)
     if echo "$logs" | grep -q "Permission denied"; then
       echo $namespace_name, $image, $pod, $logs >> ./permission_denied.txt
-    # else
-    #   continue
     fi
 
   done
