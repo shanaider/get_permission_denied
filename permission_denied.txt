@@ -1,0 +1,1 @@
+default, thanaphat1991/hello-world:jre8, hello-jre8, /bin/sh: ./hello.sh: Permission denied
